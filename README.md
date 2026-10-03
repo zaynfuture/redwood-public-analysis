@@ -23,8 +23,8 @@ streamlit run app.py
 
 Use **Demo scenario → Analyze source → confirm event coordinates** for a no-model
 walkthrough. Live extraction focuses on the primary headline event and accepts news HTML/PDF URLs, uploaded text-based PDFs,
-and pasted reports. Select a Hugging Face model in the sidebar. Offline mode uses
-previously downloaded weights; disable it to allow the initial model download.
+and pasted reports. Select a Hugging Face model in the sidebar. Downloads are enabled by default. Offline mode uses only weights already cached
+on the server; a laptop cache is not transferred to Streamlit Cloud.
 
 ## Hugging Face models and pipelines
 
@@ -44,6 +44,10 @@ previously downloaded weights; disable it to allow the initial model download.
   needed. Model downloads and news URL retrieval require network access.
 
 ## Train and fine-tune
+
+See [How to fine-tune and evaluate](MODEL_WORKFLOW.md) for the complete procedure,
+actual hyperparameters, standalone evaluation, metric definitions, and limitations.
+
 
 ```bash
 python train.py --mode baseline
@@ -144,3 +148,11 @@ Never put a Hugging Face token in a notebook, source file, or Git repository.
 
 Source auto-reload is disabled to avoid Streamlit probing Transformers lazy modules.
 Restart Streamlit after editing Python code.
+
+## Streamlit Cloud first-run model loading
+Leave **Use downloaded models only** unchecked (the default). On the first analysis,
+the server downloads the selected public model, then caches it. Rebuilds may discard
+that cache. Do not set HF_HUB_OFFLINE on a fresh deployment. No token is required
+for the public Qwen extractor; the separately published private classifier needs
+its own authorized credentials and is not bundled in Git. If downloads fail with
+offline mode off, inspect Cloud logs for outbound-network or memory limits.

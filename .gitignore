@@ -3,3 +3,5 @@ __pycache__/
 artifacts/*/
 artifacts/*.joblib
 .streamlit/secrets.toml
+
+data/raw/

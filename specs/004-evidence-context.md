@@ -45,3 +45,11 @@ relevant to constrained decoding. This gap was identified before external lookup
 Primary implementation reference: https://github.com/noamgat/lm-format-enforcer .
 The adapter uses the public core API because version 0.11.3's bundled HF adapter
 imports a tokenizer symbol removed from the installed Transformers 5 release.
+
+## Training/evaluation documentation
+Health checked; bounded context 601/1,500 estimated tokens; observation
+search-9074ef24-98d2-4ae0-bdf4-ff191d6d8666. Retrieved identifiers:
+evidence-49259f9766b2cf7ba03b20ed32f7d71e (generic fine-tuning note),
+evidence-8333938817302903ef0f1bb9fb76e048 (unrelated option-model validation).
+Gap: neither documents this classifier's procedure or metrics. Documentation is
+grounded in train.py and saved experiment reports; no new external claims needed.

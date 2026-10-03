@@ -1,5 +1,6 @@
 """Hugging Face pipelines; cache factories in the presentation layer."""
 import json
+import os
 import re
 from functools import lru_cache
 from pydantic import BaseModel, ConfigDict, Field
@@ -41,8 +42,15 @@ def make_pipeline(task: str, model_id: str, local_only: bool = False):
     device = 'cuda:0' if torch.cuda.is_available() else ('mps' if torch.backends.mps.is_available() else 'cpu')
     cls = AutoModelForCausalLM if task == 'text-generation' else AutoModelForSequenceClassification
     dtype = torch.float16 if device.startswith('cuda') else torch.float32
-    tokenizer = AutoTokenizer.from_pretrained(model_id, local_files_only=local_only, trust_remote_code=False)
-    model = cls.from_pretrained(model_id, local_files_only=local_only, trust_remote_code=False, dtype=dtype)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_id, local_files_only=local_only, trust_remote_code=False)
+        model = cls.from_pretrained(model_id, local_files_only=local_only, trust_remote_code=False, dtype=dtype)
+    except OSError as exc:
+        if local_only:
+            raise ValueError('This model is not fully downloaded on this server. Uncheck Use downloaded models only and retry. Your laptop cache is not available on Streamlit Cloud.') from exc
+        if os.getenv('HF_HUB_OFFLINE', '').upper() in {'1', 'TRUE', 'YES', 'ON'}:
+            raise ValueError('The server has HF_HUB_OFFLINE enabled. Remove that setting and restart the app to allow model downloads.') from exc
+        raise ValueError('The server could not download the Hugging Face model. Check its outbound network access and retry. Public Qwen models do not require a token; private models require authorized HF credentials.') from exc
     model.eval()
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token

@@ -43,3 +43,10 @@ Expected results (10%): targets vs actual results and error analysis.
 Coding (20%): modular Python, contracts, tests, failure handling.
 Documentation/presentation (10%): README, specs, model/data cards, demo script.
 The missing screenshot section A must be supplied before claiming complete coverage.
+
+## Reproducible methodology and standalone evaluation
+MODEL_WORKFLOW.md documents the exact full fine-tuning loop and its hyperparameters.
+evaluate.py evaluates a saved checkpoint without training, reporting sample-weighted
+cross-entropy, accuracy, macro-F1, per-class scores, confusion matrix and throughput.
+The Streamlit methodology expander exposes the guide and recorded evaluation.
+Training runtime, evaluation runtime and screenshot example metrics remain distinct.

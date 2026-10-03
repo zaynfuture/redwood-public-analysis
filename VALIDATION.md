@@ -47,3 +47,10 @@ workflow with one natural-hazard event in Bangkok and a verified source citation
 source IDs, handles repeated place mentions, and removes article UI boilerplate.
 The lightweight model still requires semantic review; format validity is not an
 accuracy guarantee. Details: artifacts/bbc-regression.json.
+
+## Standalone checkpoint evaluation
+`python evaluate.py --split test` successfully evaluated the existing saved weights
+without training: loss 1.7680, accuracy 0.1667, macro-F1 0.0476 on six fictional test
+examples. Prediction metrics match the original training report. Runtime 1.2185 s
+includes tokenization/inference and excludes model loading; this single tiny run
+is not a representative speed benchmark. See artifacts/evaluation-test.json.

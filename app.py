@@ -46,12 +46,23 @@ st.caption('REDWOOD  /  PUBLIC ANALYSIS')
 st.title('Understand the event. Explore your exposure.')
 st.write('Turn a news report into source-grounded events and location-specific business scenarios.')
 
+with st.expander('How we fine-tune and evaluate the model'):
+    st.markdown((ROOT / 'MODEL_WORKFLOW.md').read_text())
+    st.download_button('Download training and evaluation guide',
+        (ROOT / 'MODEL_WORKFLOW.md').read_text(), 'MODEL_WORKFLOW.md', 'text/markdown')
+    evaluation_report = ROOT / 'artifacts' / 'evaluation-test.json'
+    if evaluation_report.exists():
+        evaluation = json.loads(evaluation_report.read_text())
+        st.caption('Measured evaluation of the saved checkpoint' + (' (synthetic smoke dataset)' if evaluation.get('synthetic') else ''))
+        st.json(evaluation)
+
 with st.sidebar:
     st.header('Analysis workspace')
     mode = st.radio('Source mode', ['Demo scenario', 'News URL', 'Upload PDF', 'Paste text'])
     model_name = st.selectbox('Hugging Face extraction model', ['Qwen/Qwen3-0.6B', 'Qwen/Qwen2.5-3B-Instruct'])
-    local_only = st.checkbox('Use downloaded models only', value=True)
-    st.caption('0.6B is a lightweight starting point; validate extraction quality. Disable offline mode to download model weights.')
+    local_only = st.checkbox('Use downloaded models only', value=False, key='model_offline_v2',
+        help='Leave off on Streamlit Cloud. Its model cache is separate from your laptop and may be empty after a restart.')
+    st.caption('First analysis downloads the selected public model if needed. Later analyses reuse the cached model. Offline mode requires an existing server-side cache.')
     use_classifier = st.checkbox('Show fine-tuned classifier second opinion')
     st.divider()
     st.caption('Academic prototype · Evidence first · English interface')
@@ -88,7 +99,8 @@ with left:
                     else:
                         text, origin = pasted, 'User-provided text'
                     source = prepare(text, origin)
-                    generator = cached_pipeline('text-generation', model_name, local_only)
+                    with st.spinner('Loading model — the first run may download Hugging Face weights…'):
+                        generator = cached_pipeline('text-generation', model_name, local_only)
                     events = extract(source['text'], generator).events
                 st.session_state.analysis = {'source': source, 'events': [e.model_dump() for e in events],
                     'mode': mode, 'extractor': 'fixture' if mode == 'Demo scenario' else model_name,

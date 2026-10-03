@@ -1,0 +1,162 @@
+{
+  "eval_loss": 1.7680206298828125,
+  "eval_accuracy": 0.16666666666666666,
+  "eval_macro_f1": 0.047619047619047616,
+  "eval_runtime": 1.218479291012045,
+  "eval_samples_per_second": 4.9241706808299694,
+  "eval_steps_per_second": 1.6413902269433231,
+  "sample_count": 6,
+  "metrics": {
+    "accuracy": 0.16666666666666666,
+    "macro_f1": 0.047619047619047616,
+    "per_class": {
+      "natural_hazard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "conflict": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "public_health": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "infrastructure": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.2857142857142857,
+        "support": 1.0
+      },
+      "trade_policy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.16666666666666666,
+      "macro avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "natural_hazard",
+      "conflict",
+      "public_health",
+      "infrastructure",
+      "trade_policy",
+      "other"
+    ]
+  },
+  "predictions": [
+    {
+      "event_id": "fiction-natural_hazard-7",
+      "gold": "natural_hazard",
+      "predicted": "infrastructure"
+    },
+    {
+      "event_id": "fiction-conflict-7",
+      "gold": "conflict",
+      "predicted": "infrastructure"
+    },
+    {
+      "event_id": "fiction-public_health-7",
+      "gold": "public_health",
+      "predicted": "infrastructure"
+    },
+    {
+      "event_id": "fiction-infrastructure-7",
+      "gold": "infrastructure",
+      "predicted": "infrastructure"
+    },
+    {
+      "event_id": "fiction-trade_policy-7",
+      "gold": "trade_policy",
+      "predicted": "infrastructure"
+    },
+    {
+      "event_id": "fiction-other-7",
+      "gold": "other",
+      "predicted": "infrastructure"
+    }
+  ],
+  "split": "test",
+  "model_dir": "artifacts/transformer",
+  "device": "cpu",
+  "batch_size": 4,
+  "max_length": 256,
+  "synthetic": true,
+  "dataset_sha256": "9e544fbf7c171367c0afbb270d887445dcd962d7fc04a85f824e95b98f7bf18d",
+  "timing_scope": "Tokenization and inference; excludes model loading. Single pass, not a latency benchmark."
+}
