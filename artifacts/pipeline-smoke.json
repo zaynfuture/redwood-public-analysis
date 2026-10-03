@@ -1,0 +1,22 @@
+{
+  "extraction": {
+    "events": [
+      {
+        "title": "natural_hazard",
+        "event_type": "natural_hazard",
+        "location_name": "Singapore",
+        "location_quote": "Flooding in Singapore closed a coastal warehouse and delayed truck deliveries on Monday.",
+        "evidence_quote": "Flooding in Singapore closed a coastal warehouse and delayed truck deliveries on Monday.",
+        "reported_scope": "Unknown",
+        "possible_impacts": [
+          "delayed truck deliveries"
+        ]
+      }
+    ]
+  },
+  "warm_inference_seconds": 2.9,
+  "status": "passed",
+  "source": "Flooding in Singapore closed a coastal warehouse and delayed truck deliveries on Monday. The operator reported that two loading bays were unavailable. No damage outside the warehouse was confirmed.",
+  "fixture_type": "fictional smoke test",
+  "model": "Qwen/Qwen3-0.6B"
+}

@@ -1,0 +1,23 @@
+{
+  "repo_id": "zhengzhihust/redwood-public-analysis-event-classifier",
+  "url": "https://huggingface.co/zhengzhihust/redwood-public-analysis-event-classifier",
+  "revision": "582eb8ed710670bfc200751b58d181c861adb658",
+  "visibility": "private",
+  "verification": "passed",
+  "verified_file_count": 6,
+  "inference": [
+    {
+      "label": "infrastructure",
+      "uncalibrated_score": 0.192
+    },
+    {
+      "label": "infrastructure",
+      "uncalibrated_score": 0.188
+    }
+  ],
+  "checks": [
+    "SHA256 of every staged file",
+    "Downloaded revision loads through Hugging Face pipeline",
+    "Predictions match local checkpoint"
+  ]
+}

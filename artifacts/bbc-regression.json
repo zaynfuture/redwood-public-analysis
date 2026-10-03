@@ -1,0 +1,12 @@
+{
+  "url": "https://www.bbc.com/news/articles/ck1wxx8n2x3zo",
+  "model": "Qwen/Qwen3-0.6B",
+  "verified_on": "2026-10-03",
+  "verification": "Browser: News URL -> Analyze source -> event displayed -> Bangkok location confirmation",
+  "event_count": 1,
+  "event_type": "natural_hazard",
+  "location": "Bangkok",
+  "source_id": "source-de167971096ae70e",
+  "tests_passed": 25,
+  "limitations": "Format and source-reference checks do not establish semantic correctness of generated scope or business hypotheses."
+}

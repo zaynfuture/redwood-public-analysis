@@ -1,0 +1,49 @@
+text,label,event_id,split,source_url,license,synthetic
+Floodwater entered a warehouse and trucks could not reach its loading docks.,natural_hazard,fiction-natural_hazard-0,train,original-fiction,CC0-1.0,True
+An earthquake damaged a regional road and deliveries were suspended.,natural_hazard,fiction-natural_hazard-1,train,original-fiction,CC0-1.0,True
+A hurricane forced coastal shops to close before the storm arrived.,natural_hazard,fiction-natural_hazard-2,train,original-fiction,CC0-1.0,True
+Wildfire smoke caused the distribution center to suspend outdoor loading.,natural_hazard,fiction-natural_hazard-3,train,original-fiction,CC0-1.0,True
+Heavy rainfall triggered a landslide that blocked access to a factory.,natural_hazard,fiction-natural_hazard-4,train,original-fiction,CC0-1.0,True
+A severe drought reduced the water available to food processors.,natural_hazard,fiction-natural_hazard-5,train,original-fiction,CC0-1.0,True
+A volcanic eruption covered the airport runway with ash and flights stopped.,natural_hazard,fiction-natural_hazard-6,validation,original-fiction,CC0-1.0,True
+A blizzard left mountain roads impassable and isolated local retailers.,natural_hazard,fiction-natural_hazard-7,test,original-fiction,CC0-1.0,True
+Armed fighting near a border checkpoint stopped commercial freight movements.,conflict,fiction-conflict-0,train,original-fiction,CC0-1.0,True
+Military shelling damaged the industrial district during an armed conflict.,conflict,fiction-conflict-1,train,original-fiction,CC0-1.0,True
+An armed group attacked cargo vehicles on the highway.,conflict,fiction-conflict-2,train,original-fiction,CC0-1.0,True
+Clashes between soldiers forced the town market to close.,conflict,fiction-conflict-3,train,original-fiction,CC0-1.0,True
+A naval confrontation caused commercial vessels to avoid the strait.,conflict,fiction-conflict-4,train,original-fiction,CC0-1.0,True
+Hostilities near the port disrupted the arrival of merchant ships.,conflict,fiction-conflict-5,train,original-fiction,CC0-1.0,True
+A missile strike during the war damaged an oil storage terminal.,conflict,fiction-conflict-6,validation,original-fiction,CC0-1.0,True
+Renewed combat led the operator to evacuate workers from its plant.,conflict,fiction-conflict-7,test,original-fiction,CC0-1.0,True
+A disease outbreak prompted a temporary closure of a food processing facility.,public_health,fiction-public_health-0,train,original-fiction,CC0-1.0,True
+Health officials confirmed infections among staff at a distribution center.,public_health,fiction-public_health-1,train,original-fiction,CC0-1.0,True
+A contagious virus caused employee absences across local businesses.,public_health,fiction-public_health-2,train,original-fiction,CC0-1.0,True
+An epidemic led authorities to restrict large public gatherings.,public_health,fiction-public_health-3,train,original-fiction,CC0-1.0,True
+Public health inspectors linked a bacterial outbreak to contaminated water.,public_health,fiction-public_health-4,train,original-fiction,CC0-1.0,True
+A flu outbreak reduced staffing capacity at the regional hospital.,public_health,fiction-public_health-5,train,original-fiction,CC0-1.0,True
+Health authorities reported a measles cluster and issued isolation guidance.,public_health,fiction-public_health-6,validation,original-fiction,CC0-1.0,True
+A cholera outbreak led nearby restaurants to suspend water-dependent services.,public_health,fiction-public_health-7,test,original-fiction,CC0-1.0,True
+A power outage stopped production at several factories in the city.,infrastructure,fiction-infrastructure-0,train,original-fiction,CC0-1.0,True
+A burst water main closed an industrial road for emergency repairs.,infrastructure,fiction-infrastructure-1,train,original-fiction,CC0-1.0,True
+A collapsed bridge interrupted the main freight route into town.,infrastructure,fiction-infrastructure-2,train,original-fiction,CC0-1.0,True
+A telecommunications network failure prevented stores from processing payments.,infrastructure,fiction-infrastructure-3,train,original-fiction,CC0-1.0,True
+A signaling malfunction shut down the commuter railway for several hours.,infrastructure,fiction-infrastructure-4,train,original-fiction,CC0-1.0,True
+A damaged submarine cable disrupted internet connectivity for local companies.,infrastructure,fiction-infrastructure-5,train,original-fiction,CC0-1.0,True
+A transformer failure left the commercial district without electricity.,infrastructure,fiction-infrastructure-6,validation,original-fiction,CC0-1.0,True
+A broken pipeline forced the utility company to halt gas service.,infrastructure,fiction-infrastructure-7,test,original-fiction,CC0-1.0,True
+The government introduced an import tariff on manufactured steel products.,trade_policy,fiction-trade_policy-0,train,original-fiction,CC0-1.0,True
+New export controls require licenses for shipments of advanced components.,trade_policy,fiction-trade_policy-1,train,original-fiction,CC0-1.0,True
+Authorities announced sanctions restricting commerce with several companies.,trade_policy,fiction-trade_policy-2,train,original-fiction,CC0-1.0,True
+A customs regulation increased documentation requirements for imported food.,trade_policy,fiction-trade_policy-3,train,original-fiction,CC0-1.0,True
+The ministry imposed a quota on agricultural imports for the coming year.,trade_policy,fiction-trade_policy-4,train,original-fiction,CC0-1.0,True
+A trade agreement removed duties on qualifying industrial machinery.,trade_policy,fiction-trade_policy-5,train,original-fiction,CC0-1.0,True
+A new embargo prohibited specified technology exports to the destination.,trade_policy,fiction-trade_policy-6,validation,original-fiction,CC0-1.0,True
+The treasury announced additional customs duties on imported vehicle parts.,trade_policy,fiction-trade_policy-7,test,original-fiction,CC0-1.0,True
+A software company unveiled a new scheduling application at its annual conference.,other,fiction-other-0,train,original-fiction,CC0-1.0,True
+A local museum opened an exhibition of paintings from private collections.,other,fiction-other-1,train,original-fiction,CC0-1.0,True
+A retailer announced a refreshed logo and a redesigned shopping website.,other,fiction-other-2,train,original-fiction,CC0-1.0,True
+A university hosted a lecture on the history of regional architecture.,other,fiction-other-3,train,original-fiction,CC0-1.0,True
+A publishing house released a novel by a first-time author.,other,fiction-other-4,train,original-fiction,CC0-1.0,True
+A sports club announced its schedule of friendly matches for next summer.,other,fiction-other-5,train,original-fiction,CC0-1.0,True
+A technology firm demonstrated a new keyboard at a product showcase.,other,fiction-other-6,validation,original-fiction,CC0-1.0,True
+A neighborhood library expanded its collection of historical photographs.,other,fiction-other-7,test,original-fiction,CC0-1.0,True

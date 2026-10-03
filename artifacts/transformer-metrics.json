@@ -1,0 +1,258 @@
+{
+  "mode": "transformer",
+  "seed": 453,
+  "dataset_sha256": "9e544fbf7c171367c0afbb270d887445dcd962d7fc04a85f824e95b98f7bf18d",
+  "synthetic": true,
+  "split_sizes": {
+    "train": 36,
+    "validation": 6,
+    "test": 6
+  },
+  "configuration": {
+    "mode": "transformer",
+    "data": "data/smoke.csv",
+    "model": "distilbert-base-uncased",
+    "epochs": 1,
+    "batch_size": 4,
+    "local_files_only": true
+  },
+  "best_epoch": 1,
+  "validation": {
+    "accuracy": 0.16666666666666666,
+    "macro_f1": 0.047619047619047616,
+    "per_class": {
+      "natural_hazard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "conflict": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "public_health": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "infrastructure": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.2857142857142857,
+        "support": 1.0
+      },
+      "trade_policy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.16666666666666666,
+      "macro avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "natural_hazard",
+      "conflict",
+      "public_health",
+      "infrastructure",
+      "trade_policy",
+      "other"
+    ]
+  },
+  "device": "cpu",
+  "total_parameters": 66958086,
+  "trainable_parameters": 66958086,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.7966571648915608,
+      "validation_macro_f1": 0.047619047619047616
+    }
+  ],
+  "test": {
+    "accuracy": 0.16666666666666666,
+    "macro_f1": 0.047619047619047616,
+    "per_class": {
+      "natural_hazard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "conflict": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "public_health": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "infrastructure": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.2857142857142857,
+        "support": 1.0
+      },
+      "trade_policy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.16666666666666666,
+      "macro avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.027777777777777776,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.047619047619047616,
+        "support": 6.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "natural_hazard",
+      "conflict",
+      "public_health",
+      "infrastructure",
+      "trade_policy",
+      "other"
+    ]
+  },
+  "runtime_seconds": 11.23,
+  "interpretation": "Synthetic pipeline smoke test only; not evidence of real-world performance."
+}

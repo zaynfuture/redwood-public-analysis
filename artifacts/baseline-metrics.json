@@ -1,0 +1,247 @@
+{
+  "mode": "baseline",
+  "seed": 453,
+  "dataset_sha256": "9e544fbf7c171367c0afbb270d887445dcd962d7fc04a85f824e95b98f7bf18d",
+  "synthetic": true,
+  "split_sizes": {
+    "train": 36,
+    "validation": 6,
+    "test": 6
+  },
+  "configuration": {
+    "mode": "baseline",
+    "data": "data/smoke.csv",
+    "model": "distilbert-base-uncased",
+    "epochs": 3,
+    "batch_size": 4,
+    "local_files_only": false
+  },
+  "validation": {
+    "accuracy": 0.6666666666666666,
+    "macro_f1": 0.5555555555555555,
+    "per_class": {
+      "natural_hazard": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 1.0
+      },
+      "conflict": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 1.0
+      },
+      "public_health": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "infrastructure": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "trade_policy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "other": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "accuracy": 0.6666666666666666,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5555555555555555,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5555555555555555,
+        "support": 6.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "label_order": [
+      "natural_hazard",
+      "conflict",
+      "public_health",
+      "infrastructure",
+      "trade_policy",
+      "other"
+    ]
+  },
+  "test": {
+    "accuracy": 0.5,
+    "macro_f1": 0.4444444444444444,
+    "per_class": {
+      "natural_hazard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "conflict": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "public_health": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "infrastructure": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "trade_policy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "other": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 1.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.4444444444444444,
+        "support": 6.0
+      },
+      "weighted avg": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.4444444444444444,
+        "support": 6.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "label_order": [
+      "natural_hazard",
+      "conflict",
+      "public_health",
+      "infrastructure",
+      "trade_policy",
+      "other"
+    ]
+  },
+  "runtime_seconds": 0.61,
+  "interpretation": "Synthetic pipeline smoke test only; not evidence of real-world performance."
+}
